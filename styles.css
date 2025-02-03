@@ -1,0 +1,389 @@
+:root {
+    --primary-color: #0891B2;
+    --secondary-color: #0d6efd;
+    --dark-color: #333;
+    --light-color: #f8f9fa;
+}
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+    margin: 0 15px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.logo {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-10px);
+}
+
+/* Features Section */
+#features .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#features .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+#features .service-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+#features .service-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 100px 0;
+}
+
+/* About Section */
+.about-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item i {
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Menyesuaikan posisi social links di pojok kiri bawah */
+.social-links {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    width: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling teks */
+.social-links p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Styling ikon sosial media */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background: white;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efek hover */
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+
+/* Card Style */
+.service-card {
+    display: flex;
+    flex-direction: column; /* Menyusun gambar di atas teks */
+    align-items: flex-start; /* Menjaga gambar dan teks berada di kiri */
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%; /* Memastikan kartu mengisi lebar penuh kolom */
+    text-align: left; /* Teks di dalam setiap kartu mulai dari kiri */
+    height: 100%; /* Memastikan tinggi kartu mengisi ruang yang tersedia */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Menjaga agar teks tetap berada di bawah gambar, dan mengatur spasi yang tepat */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Mengatur jarak antara gambar dan teks */
+.service-icon {
+    margin-bottom: 1.5rem; /* Jarak yang lebih besar antara gambar dan teks */
+}
+
+.service-logo {
+    width: 50px; /* Ukuran gambar disesuaikan */
+    height: auto;
+}
+
+/* Konten teks */
+.service-content {
+    text-align: left; /* Memastikan teks dimulai dari kiri */
+    flex-grow: 1; /* Memastikan konten teks mengambil sisa ruang yang ada */
+}
+
+.service-content h4 {
+    font-size: 1.25rem; /* Ukuran font judul */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.service-content p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Styling untuk header dan subheader */
+h6.text-primary {
+    font-size: 1.2rem;
+}
+
+h2.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsif - Kartu memiliki panjang yang konsisten */
+@media (max-width: 768px) {
+    .service-card {
+        height: auto; /* Menyesuaikan tinggi pada perangkat kecil */
+    }
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.features-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
+    color: var(--secondary-color);
+    margin-right: 1rem;
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    padding: 5rem 0 2rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .about-content {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+    
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
