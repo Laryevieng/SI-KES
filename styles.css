@@ -171,24 +171,27 @@ html {
     transform: translateY(-2px);
 }
 
+.fa {
+    color: #007bff; /* Ini untuk membuat warna ikon menjadi biru */
+}
 
 /* Card Style */
 .service-card {
     display: flex;
-    flex-direction: column; /* Menyusun gambar di atas teks */
-    align-items: flex-start; /* Menjaga gambar dan teks berada di kiri */
+    flex-direction: column; 
+    align-items: flex-start; 
     background: white;
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     margin-bottom: 20px;
-    width: 100%; /* Memastikan kartu mengisi lebar penuh kolom */
-    text-align: left; /* Teks di dalam setiap kartu mulai dari kiri */
-    height: 100%; /* Memastikan tinggi kartu mengisi ruang yang tersedia */
+    width: 100%; 
+    text-align: left; 
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Menjaga agar teks tetap berada di bawah gambar, dan mengatur spasi yang tepat */
+    justify-content: space-between; 
 }
 
 .service-card:hover {
